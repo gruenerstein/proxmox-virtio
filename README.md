@@ -1,10 +1,14 @@
 # proxmox-virtio
 # 
 This script allows you to add an cronjob to download the latest virtio.iso to you Proxmox ISO Directory. 
+
 You can switch between 'latest' and 'stable' by editing the variable 'version'.
 
 
 # Example '/etc/crontab'
+
+Edit the file with your favorite editor. 
+
 ```
 # /etc/crontab: system-wide crontab
 # Unlike any other crontab you don't have to run the `crontab'
@@ -30,4 +34,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0  0    1 * *   root    /root/virtio.sh
 #
 ```
-In this example the script is located in the '/root/' directory. 
+In this example the script is located in the '/root/' directory an will run the first day of month @ 0:00
+
+Please adapt the file to your environment and security needs. 
